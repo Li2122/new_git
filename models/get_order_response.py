@@ -48,9 +48,7 @@ class Orders:
 
 @dataclass
 class OneOrder:
-    order: list[dict] | list[Order]
+    order: dict | Order
 
-
-@dataclass
-class NewOrder:
-    track: int
+    def __post_init__(self):
+        self.order = Order(**self.order)
