@@ -50,5 +50,5 @@ class Orders:
 class OneOrder:
     order: dict | Order
 
-    def __post_init__(self):
-        self.order = Order(**self.order)
+    # def __post_init__(self):
+    #     self.order = Order(**self.order)

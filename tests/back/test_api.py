@@ -1,5 +1,6 @@
 from actions.courier_actions import CourierActions
 from actions.order_actions import OrderActions
+from actions.stations_action import StationsActions
 from data.data_courier import CourierData
 from data.data_order import OrderData
 from data.response_text import CourierErrorText
@@ -59,3 +60,9 @@ class TestApiCourier:
         response = courier.delete_courier(CourierData.nonexistent_courier_id)
         assert response.status_code == 404
         assert response.json() == CourierErrorText.error_nonexistent_courier
+
+class TestApiStations:
+    def test_get_stations(self):
+        stations = StationsActions()
+        response = stations.get_stations()
+        assert len(response) == 225
