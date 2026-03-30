@@ -88,5 +88,6 @@ class OrderPage(BasePage):
     def check_header_second_page_order(self) -> bool:
         try:
             self.find_element(Locators.text_header_second_page_order)
+            return True
         except TimeoutException:
             return False

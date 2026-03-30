@@ -27,3 +27,5 @@ class Locators:
     button_go = (By.XPATH, "//button[text()='Go!']")
     text_scooter_on_warehouse = (By.XPATH, "//div[text()='Имя']")
     pic_not_found = "//img[@alt='Not found']"
+    text_important_question = (By.XPATH,"//div[text()='Вопросы о важном']")
+    cookie_button = (By.XPATH, "//button[text()='да все привыкли']")
